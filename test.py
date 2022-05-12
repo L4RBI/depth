@@ -43,7 +43,7 @@ for sets in Listset:
         data.extend(_tmp)
 # Input images
 print(len(data))
-path = "../depth"
+path = "../depthImages"
 createDir(path)
 
 for i in range(len(data)):
