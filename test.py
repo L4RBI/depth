@@ -19,7 +19,7 @@ def createDir(path):
         os.mkdir(path)
 # Argument Parser
 parser = argparse.ArgumentParser(description='High Quality Monocular Depth Estimation via Transfer Learning')
-parser.add_argument('--model', default='../input/kitty-weights/kitti.h5', type=str, help='Trained Keras model file.')
+parser.add_argument('--model', default='../../input/kitty-weights/kitti.h5', type=str, help='Trained Keras model file.')
 parser.add_argument('--input', default='examples/*.jpg', type=str, help='Input filename or folder.')
 args = parser.parse_args()
 
@@ -33,7 +33,7 @@ model = load_model(args.model, custom_objects=custom_objects, compile=False)
 
 print('\nModel loaded ({0}).'.format(args.model))
 
-path = "../input/thermal-images/kaist-cvpr15/images"
+path = "../../input/thermal-images/kaist-cvpr15/images"
 data = []
 Listset=["set00","set01","set02","set06","set07","set08","set09","set10","set11"] 
 for sets in Listset:
@@ -43,7 +43,7 @@ for sets in Listset:
         data.extend(_tmp)
 # Input images
 print(len(data))
-path = "./depth"
+path = "../depth"
 createDir(path)
 
 for i in range(len(data)):
