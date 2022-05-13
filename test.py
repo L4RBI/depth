@@ -48,7 +48,7 @@ createDir(path)
 
 for i in range(len(data)):
     if(i % 1000 == 0):
-        print( i + "/78000")
+        print( str(i) + "/78000")
     temp = data[i].split("/")
     set = temp[-4]
     _set = os.path.join(path,set)
